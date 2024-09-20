@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "MDWiki Lookup",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["medical-terms.json"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
